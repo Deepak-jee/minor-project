@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Website</title>
+    <link rel="stylesheet" href="minor.css">
+    <link rel="stylesheet" href="minor.js">
+    <script src="https://cdn.jsdelivr.net/npm/@easepick/bundle@1.2.1/dist/index.umd.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b8a58bc95c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" media="mediatype and|not|only (expressions)" href="minor.css">
+</head>
+<body>
+    <header class="header" id="navigation-menu">
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">
+                    <img src="https://raw.githubusercontent.com/MichaelZhou334/Hotel-Landing-Page/main/images/logo.jpeg" alt="logo image">
+                </a>
+                <ul class="nav-menu">
+                    <li> <a href="#home" class="nav-list">Room</a> </li>
+                    <li> <a href="#destinations" class="nav-list">Destinations</a> </li>
+                    <li> <a href="#offers" class="nav-list">Offers</a> </li>
+                    <li> <a href="#travel-experience" class="nav-list">Room Experiences</a> </li>
+                    <li> <a href="#meetings-events" class="nav-list">Account</a> </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+
+    </header>
+
+    <div class="location-ask">
+        <span class="where-to">Where to?</span> <span class="required">(Required) </span> <br />
+    <div class="booking">
+
+            <label class="location-label"></label>
+            <input type="text" class="location" placeholder="City, state, location, or airport" required>
+
+            <button type="submit" class="btn date" onclick="dateOpenPopup()">Date</button>
+            <div class="date-popup" id="date-popup">
+                <h2>Select Date</h2>
+                <input type="text" id="datepicker">
+                <button type="button" onclick="dateClosePopup()">OK</button>
+            </div>
+
+            <button type="submit" class="btn room" onclick="roomOpenPopup()">Rooms & Guests</button>
+            <div class="room-popup" id="room-popup">
+                <h2>Rooms and Guests</h2>
+                <div class="container-room">
+                <form>
+                    <label for="rooms">Rooms:</label>
+                    <input type="number" id="rooms" value=1><br><br>
+                    <label for="adults">Adults:</label>
+                    <input type="number" id="adults" value=1><br><br>
+                    <label for="kids">Kids:</label>
+                    <input type="number" id="kids" value=0><br><br>
+                </form>
+                <button type="button" onclick="roomClosePopup()">OK</button>
+
+            </div>
+            </div>
+            <button type="submit" class="btn special-rates" onclick="ratesOpenPopup()">Special Rates</button>
+            <div class="rates-popup" id="rates-popup">
+                <h2>Special Rates</h2>
+                <form class="special-rates-checkbox">
+                    <label class="special-rates-checkbox">Use Points
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="special-rates-checkbox">Travel Agents
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="special-rates-checkbox">AAA Rate
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="special-rates-checkbox">AARP Rate
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="special-rates-checkbox">Senior Rate
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="special-rates-checkbox">Government / Military Rates
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+
+                </form>
+                    <form class="special-rates-text">
+
+                        <label for="promotion-code">Promotion Code</label><br>
+                        <input type="text" id="promotion-code"><br><br>
+                        <label for="group-code">Group Code</label><br>
+                        <input type="text" id="group-code"><br><br>
+                        <label for="corporate-account">Corporate Account</label><br>
+                        <input type="text" id="corporate-account"><br><br>
+
+                    </form>
+
+
+                <button type="button" onclick="ratesClosePopup()">OK</button>
+            </div>
+
+            <button type="submit" class="btn find-hotels">Find a Hotel</button>
+
+    </div>
+
+    <div class="hotel-front-container">
+        <img src="https://www.satyamevgroups.com/blog/wp-content/uploads/2020/08/patna.jpg" alt="picture of the front of the hotel" class="hotel-front">
+       </div>
+
+       <div class="welcome-text">
+        <h2>Beautiful Patna</h2>
+        <p>Patna: The City of Ancient Glory and Modern Growth.</p>
+        <a href="https://www.hindustantimes.com/rf/image_size_960x540/HT/p2/2017/01/11/Pictures/_a87c71b4-d7db-11e6-a473-4fa7bf176867.jpg"><button class="btn">Explore More</button></a>
+       </div>
+
+       <div class="subheading">
+        <h2>Exhilarating Destinations</h2>
+        <p>Here is a journey through some of the most wonderful places on Bihar.</p>
+       </div>
+
+       <div class="destinations-images">
+
+        <div class="country" id="gaya-div">
+            <img src="https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/htl-imgs/201712071423386026-64d3a8003bbe11e7af230a209fbd0127.jpg?&output-quality=75&downsize=910:612&crop=910:612;4,0&output-format=jpg" alt="Gaya hotel" >
+            <div class="country-text" id="gaya-text">GAYA</div>
+        </div>
+        <div class="country" id="nalanda-div">
+            <img src="https://getmyuni.azureedge.net/college-image/big/kk-university-kku-nalanda.jpg" alt="Nalanda hotel" >
+            <div class="country-text" id="nalanda-text">NALANDA</div>
+        </div>
+        <div class="country" id="bhojpur-div">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/23/a8/af/oyo-28584-the-royal-park.jpg?w=700&h=-1&s=1" alt="Bhojpur hotel" >
+            <div class="country-text" id="bhojpur-text">BHOJPUR</div>
+        </div>
+        <div class="country" id="mujjafarpur-div">
+            <img src="https://i.ytimg.com/vi/RKazVZ0qYiQ/maxresdefault.jpg" alt="Mujjafarpur hotel" >
+            <div class="country-text" id="mujjafarpur">MUJJAFARPUR</div>
+        </div>
+       </div>
+
+       <div class="subheading">
+        <h2>Experience Something New</h2>
+        <p>The unknown beckons us, and our imaginations run wild with possibilities</p>
+       </div>
+
+       <div class="experience-images">
+        <div class="experience" id="discount-div">
+            <img src="https://i.pinimg.com/236x/66/72/28/667228bfe5dd9972987d214307f5a958.jpg" alt="discount picture" >
+            <div class="experience-text" id="discount-text">ADVANCE PURCHASE DISCOUNT</div>
+        </div>
+        <div class="experience" id="points-div">
+            <img src="https://i.pinimg.com/236x/62/b3/6e/62b36ea5ddd2dab37b1712f57bf42b61.jpg" alt="points picture" >
+            <div class="experience-text" id="points-text">MULTIPLY YOUR POINTS</div>
+        </div>
+        <div class="experience" id="parking-div">
+            <img src="https://i.pinimg.com/236x/e9/61/26/e96126ac63741bc88a53347a4281f2e1.jpg" alt="parking picture" >
+            <div class="experience-text" id="parking-text">PARKING & STAY</div>
+        </div>
+        <div class="experience" id="plan-div">
+            <img src="https://i.pinimg.com/236x/5d/9e/8f/5d9e8f7464772b8282e334cd8db49943.jpg" alt="plan picture" >
+            <div class="experience-text" id="plan-text">PLAN AND SAVE</div>
+        </div>
+        <div class="experience" id="first-time-div">
+            <img src="https://raw.githubusercontent.com/MichaelZhou334/Hotel-Landing-Page/main/images/first-time.jpg" alt="first-time picture" >
+            <div class="experience-text" id="first-time-text">FIRST TIME DISCOUNTS</div>
+        </div>
+        <div class="experience" id="members-div">
+            <img src="https://raw.githubusercontent.com/MichaelZhou334/Hotel-Landing-Page/main/images/front-desk.jpg" alt="members picture" >
+            <div class="experience-text" id="members-text">MEMBERS GET MORE</div>
+        </div>
+       </div>
+
+       <div class="different-hotels">
+        <img src="https://i.pinimg.com/564x/46/85/ba/4685ba9d1b8979e627888b84a1657964.jpg" alt="hotel front">
+        <div class="different-hotels-div">
+        <h2>Homes & Villas</h2>
+        <p>Homes & Villas was designed to provide travelers with access to high-end vacation rentals, such as entire homes, villas, and luxury accommodations. The platform featured a curated selection of upscale and unique properties, with distinctive architectural features, stunning views, or premium amenities. We offered additional concierge services, which could include personalized check-in experiences, access to local recommendations, and assistance with planning activities and dining reservations.</p>
+        <button type="submit" class="btn">Join for Free</button>
+    </div>
+    </div>
+
+    <div class="back-to-top">
+    <button onclick="topFunction()" class="btn"> ⬆ Back to Top</button>
+    </div>
+
+  <hr class="footer-line">
+
+    <div class="footer">
+        <div class="col-1">
+            <div>
+            <h3>How can we help?</h3>
+            <button class="btn">Request a Call</button>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=100061301906587&mibextid=ZbWKwL"><i class="fa-brands fa-facebook" ></i></a>
+                <a href="https://x.com/DeepakY46642865?t=3teXQCWBAydrrT7d7z1ojA&s=09"><i class="fa-brands fa-twitter"></i></a> 
+                <a href="https://www.instagram.com/deepak_.sanatani/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@Deepak_yduvanshi"><i class="fa-brands fa-youtube"></i></a>
+
+            </div>
+        </div>
+        </div>
+        <div class="col-2">
+            <a href="#">Travel Inspiration</a>
+            <a href="#">Pet-Friendly Stays</a>
+            <a href="#">Gift Card</a>
+            <a href="#">Global Privacy Statement</a>
+            <a href="#">Site Map</a>
+            <a href="#">Development</a>
+            <a href="#">Media</a>
+            <a href="#">Blog</a>
+            <a href="#">Web Accessibility</a>
+            <a href="#">Customer Support</a>
+        </div>
+        <div class="col-3">
+            <a href="#">Cookies Statement</a>
+            <a href="#">Hotel Hotline</a>
+            <a href="#">Corporate Responsibility</a>
+            <a href="#">Hotel Honors Discount Terms & Conditions</a>
+            <a href="#">Modern Slavery and Human Trafficking</a>
+            <a href="#">Do Not Sell My Personal Information</a>
+            <a href="#">Personal Data Requests</a>
+            <a href="#">Site Usage Agreement</a>
+        </div>
+    </div>
+    <script src="minor.js"></script>
+    </body>
+    </html>
